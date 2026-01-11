@@ -1,32 +1,35 @@
-# qa-automation-quality-gates
-Production-ready QA automation framework demonstrating structured API and functional testing, CI/CD integration, risk analysis, and negative/positive test coverage. Designed to showcase professional QA practices for automation and software engineering roles.
+# QA Automation Quality Gates
 
+Production-oriented QA automation framework demonstrating structured API and
+functional testing, CI/CD quality gates, risk-based test planning, and
+positive/negative test coverage.
 
-Here’s the order you should implement them in your `tests/` folder:
+This repository is designed to showcase professional QA and SDET practices,
+including test organization, automation readiness, and continuous integration
+validation.
 
-1. **Smoke Test**  
-   - Test that the API/service is reachable and returns 200 for health endpoints.
+## Key Capabilities
+- Smoke, positive, negative, and regression testing
+- Risk-based test planning and documentation
+- CI/CD integration with automated test execution
+- Structured test categorization aligned to enterprise QA practices
 
-2. **Positive Test Cases**  
-   - Valid API requests return expected responses (correct fields, data types).
+## Tech Stack
+- Python
+- PyTest
+- GitHub Actions
+- Linux (Pop!_OS)
 
-3. **Negative Test Cases**  
-   - Invalid inputs produce correct error codes (400, 404, etc.).
-   - Missing required fields handled properly.
+## Test Structure
+Tests are organized by category to reflect real-world QA strategies:
+- Smoke
+- Functional (positive, negative, boundary)
+- Regression
+- Performance / response validation
+- Security and compliance (scaffolded)
 
-4. **Boundary & Edge Cases**  
-   - Maximum/minimum input values.
-   - Empty or null payloads.
-   - Large payloads.
+## Running Tests Locally
+```bash
+pip install -r requirements.txt
+pytest
 
-5. **Regression Test**  
-   - Verify core functionality after new changes.
-   - Re-run positive test suite with previous inputs.
-
-6. **Performance / Response Validation**  
-   - Measure response times.
-   - Fail if latency exceeds threshold.
-
-7. **CI/CD Integration Test**  
-   - Automate all previous tests in a GitHub Actions workflow.
-   - Fail build if any test fails or if linting errors exist.
