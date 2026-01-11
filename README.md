@@ -1,35 +1,32 @@
-# QA Automation Quality Gates
+# QA Automation Framework (PyTest)
 
-Production-oriented QA automation framework demonstrating structured API and
-functional testing, CI/CD quality gates, risk-based test planning, and
-positive/negative test coverage.
+## Overview
+This repository demonstrates a production-style QA automation framework
+using PyTest, structured test categories, and CI quality gates.
 
-This repository is designed to showcase professional QA and SDET practices,
-including test organization, automation readiness, and continuous integration
-validation.
-
-## Key Capabilities
-- Smoke, positive, negative, and regression testing
-- Risk-based test planning and documentation
-- CI/CD integration with automated test execution
-- Structured test categorization aligned to enterprise QA practices
+## Test Coverage
+- Functional (SDLC-stage aligned)
+- UI/UX
+- Security & Subdomain Enumeration
+- Scalability & Load
+- Privacy & Compliance
+- Mobile OS Resilience
+- Environment & Configuration
+- Data Sync & Persistence
 
 ## Tech Stack
-- Python
+- Python 3.x
 - PyTest
-- GitHub Actions
+- GitHub Actions (CI)
 - Linux (Pop!_OS)
 
-## Test Structure
-Tests are organized by category to reflect real-world QA strategies:
-- Smoke
-- Functional (positive, negative, boundary)
-- Regression
-- Performance / response validation
-- Security and compliance (scaffolded)
-
-## Running Tests Locally
-```bash
+## How to Run Tests
 pip install -r requirements.txt
 pytest
 
+## CI / Quality Gates
+All tests run automatically on push and pull requests.
+Builds fail if tests do not pass.
+
+## Limitations
+Some test categories are scaffolding for demonstration purposes.
